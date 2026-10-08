@@ -1,0 +1,3 @@
+import React from 'react'; import { View,Text,StyleSheet } from 'react-native'; import { colors } from '../constants/colors';
+export default function SummaryCard({label,value,icon}) { return <View style={s.card}><Text style={s.icon}>{icon}</Text><Text style={s.value}>{value}</Text><Text style={s.label}>{label}</Text></View>; }
+const s=StyleSheet.create({card:{backgroundColor:colors.surface,borderRadius:18,padding:16,flex:1,minHeight:112,justifyContent:'space-between',borderWidth:1,borderColor:colors.border},icon:{fontSize:18},value:{fontSize:20,fontWeight:'800',color:colors.ink},label:{fontSize:12,color:colors.muted}});

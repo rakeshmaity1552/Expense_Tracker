@@ -1,0 +1,3 @@
+import React from 'react'; import { View,Text,StyleSheet } from 'react-native'; import { colors } from '../constants/colors';
+export default function EmptyState({title='Nothing here yet',message='Your records will appear here.'}) { return <View style={s.wrap}><Text style={s.icon}>🧾</Text><Text style={s.title}>{title}</Text><Text style={s.message}>{message}</Text></View>; }
+const s=StyleSheet.create({wrap:{alignItems:'center',padding:36},icon:{fontSize:38,marginBottom:12},title:{fontSize:17,fontWeight:'700',color:colors.ink},message:{fontSize:13,color:colors.muted,marginTop:6,textAlign:'center'}});

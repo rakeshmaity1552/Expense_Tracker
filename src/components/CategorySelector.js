@@ -1,0 +1,3 @@
+import React from 'react'; import { ScrollView,Pressable,Text,StyleSheet } from 'react-native'; import { colors } from '../constants/colors';
+export default function CategorySelector({categories,value,onChange}) { return <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={s.list}>{categories.map(c=><Pressable key={c.id} onPress={()=>onChange(c.id)} style={[s.item,value===c.id&&s.selected]}><Text>{c.icon} {c.name}</Text></Pressable>)}</ScrollView>; }
+const s=StyleSheet.create({list:{gap:8,paddingVertical:4},item:{paddingHorizontal:13,paddingVertical:10,borderRadius:20,borderWidth:1,borderColor:colors.border,backgroundColor:colors.surface},selected:{backgroundColor:colors.pale,borderColor:colors.primary}});
